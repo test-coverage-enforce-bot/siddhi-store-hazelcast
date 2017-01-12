@@ -83,11 +83,13 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.artifactId}</Bundle-Name>
                         <Private-Package>
+                            com.hazelcast.*,
                             org.wso2.extension.siddhi.eventtable.hazelcast.internal.*
                         </Private-Package>
                         <Export-Package>
+                            !com.hazelcast.*,
                             !org.wso2.extension.siddhi.eventtable.hazelcast.internal.*,
-                            org.wso2.extension.siddhi.eventtable.*;
+                            org.wso2.extension.siddhi.eventtable.hazelcast.*
                         </Export-Package>
                         <Import-Package>
                             org.osgi.service.component;version="${equinox.osgi.services.imp.pkg.version.range}",
@@ -96,8 +98,8 @@
                             org.apache.log4j;version="${log4j.imp.pkg.version.range}",
                             javax.sql,
                             javax.xml.bind,
-                            javax.xml.bind.annotation
-                            <!--*;resolution:=optional-->
+                            javax.xml.bind.annotation,
+                            *;resolution:=optional
                         </Import-Package>
                     </instructions>
                 </configuration>

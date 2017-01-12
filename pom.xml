@@ -56,6 +56,7 @@
         </equinox.osgi.services.imp.pkg.version.range>
         <hazelcast.version>3.5.2.wso2v1</hazelcast.version>
         <hazelcast.imp.pkg.version.range>[3.5, 3.6.0)</hazelcast.imp.pkg.version.range>
+        <log4j.imp.pkg.version.range>[1.2, 2.0)</log4j.imp.pkg.version.range>
     </properties>
 
     <scm>
